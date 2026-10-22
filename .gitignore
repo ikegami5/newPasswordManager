@@ -147,3 +147,14 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Project-local toolchains, caches and generated app files
+.local-tools/
+.cache/
+**/.expo/
+apps/android/android/
+apps/android/ios/
+*.keystore
+*.jks
+local.properties
+data.txt

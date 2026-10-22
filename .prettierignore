@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+.local-tools/
+package-lock.json
+apps/desktop/out/
+apps/desktop/dist/
+apps/android/.expo/
+apps/android/android/
+apps/android/dist/

@@ -1,0 +1,29 @@
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import prettier from 'eslint-config-prettier';
+
+export default [
+  {
+    ignores: [
+      '**/node_modules/**',
+      '**/out/**',
+      '**/dist/**',
+      '.cache/**',
+      '.local-tools/**',
+      '**/.expo/**',
+      'apps/android/android/**',
+    ],
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+      },
+    },
+  },
+  prettier,
+];

@@ -1,0 +1,42 @@
+# Project Git permissions. Task authorization is still required for commits/pushes.
+# Work from the repository root; do not use these rules for unrelated repositories.
+prefix_rule(
+    pattern = ["git", ["status", "diff", "log", "show", "ls-files", "ls-remote", "rev-parse", "fetch", "add", "commit"]],
+    decision = "allow",
+    match = ["git status --short", "git diff --cached", "git add README.md", "git commit -m setup", "git fetch origin"],
+    not_match = ["git reset --hard", "git clean -fd", "git push --force origin main"],
+)
+
+prefix_rule(
+    pattern = ["git", "branch", ["--show-current", "--list"]],
+    decision = "allow",
+    match = ["git branch --show-current", "git branch --list"],
+    not_match = ["git branch -D main"],
+)
+
+# Keep publishing scoped to the configured origin/main branch.
+prefix_rule(
+    pattern = ["git", "push", "origin", "main"],
+    decision = "allow",
+    match = ["git push origin main"],
+    not_match = ["git push --force origin main", "git push origin other"],
+)
+
+# Prompt for common history-rewriting/destructive command forms.
+prefix_rule(
+    pattern = ["git", ["reset", "clean", "rebase", "filter-branch"]],
+    decision = "prompt",
+    match = ["git reset --hard", "git clean -fd", "git rebase main"],
+)
+
+prefix_rule(
+    pattern = ["git", "commit", "--amend"],
+    decision = "prompt",
+    match = ["git commit --amend --no-edit"],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main", ["--force", "-f", "--force-with-lease", "--delete", "-d", "--mirror", "--prune"]],
+    decision = "prompt",
+    match = ["git push origin main --force", "git push origin main --force-with-lease"],
+)

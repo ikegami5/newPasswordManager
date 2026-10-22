@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "New Password Manager",
+    "slug": "new-password-manager",
+    "version": "0.1.0",
+    "platforms": ["android"],
+    "scheme": "newpasswordmanager",
+    "android": { "package": "io.github.ikegami5.newpasswordmanager" }
+  }
+}
