@@ -1,0 +1,42 @@
+// Private credentials stay outside generated android/ and version control.
+def newpmSigningPath = providers.gradleProperty('newpm.signingProperties').orNull
+def newpmSigningReady = false
+android.buildTypes.release.signingConfig = null
+
+if (newpmSigningPath != null) {
+    def credentialsFile = new File(newpmSigningPath)
+    def credentials = new Properties()
+    if (!credentialsFile.isFile()) {
+        throw new GradleException('NewPM signing properties file is missing.')
+    }
+    credentialsFile.withInputStream { credentials.load(it) }
+    for (name in ['storeFile', 'storePassword', 'keyAlias', 'keyPassword']) {
+        if (!credentials.getProperty(name)) {
+            throw new GradleException('NewPM signing properties are incomplete.')
+        }
+    }
+    def keyStoreFile = new File(credentials.getProperty('storeFile'))
+    if (!keyStoreFile.isAbsolute()) {
+        keyStoreFile = new File(credentialsFile.parentFile, credentials.getProperty('storeFile'))
+    }
+    if (!keyStoreFile.isFile()) {
+        throw new GradleException('NewPM release keystore file is missing.')
+    }
+    android.signingConfigs.create('newpmRelease') {
+        storeFile keyStoreFile
+        storePassword credentials.getProperty('storePassword')
+        keyAlias credentials.getProperty('keyAlias')
+        keyPassword credentials.getProperty('keyPassword')
+    }
+    android.buildTypes.release.signingConfig = android.signingConfigs.newpmRelease
+    newpmSigningReady = true
+}
+
+// Never fall back to the public debug signing key for a release build.
+gradle.taskGraph.whenReady { graph ->
+    if (!newpmSigningReady && graph.allTasks.any {
+        it.project == project && it.name.toLowerCase(java.util.Locale.ROOT).contains('release')
+    }) {
+        throw new GradleException('Release signing is required. Use npm run build:android:release with private signing properties.')
+    }
+}

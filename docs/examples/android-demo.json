@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "records": [
+    {
+      "id": "fictional-service",
+      "serviceName": "Fictional service",
+      "serviceInfo": "動作確認専用の架空データです。実サービスでは使いません。",
+      "generatorVersion": "legacy-pc-v1",
+      "hasCapital": true,
+      "hasNumeral": true,
+      "symbols": "!@#",
+      "passwordLength": 16,
+      "salts": [
+        { "id": "fictional-current", "value": "Fictional-v1" },
+        { "id": "fictional-old", "value": "Fictional-history" }
+      ]
+    }
+  ]
+}

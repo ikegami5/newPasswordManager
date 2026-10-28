@@ -1,8 +1,14 @@
 # 技術方針と詳細選定案
 
-2026-10-22作成・更新。ユーザーの指定は「単一リポジトリ」「モダンな技術」「AIエージェントによる保守」「デスクトップはElectron」「スマホはAndroidのみ」。追加の指定により、シンプルな構成、GitHub Actionsを使わないローカル検証、当面Windows上でのデスクトップ検証を基本方針とする。[基本方針の決定](decisions/0001-simple-structure-and-local-validation.md)、[開発環境の決定](decisions/0002-development-environment.md)を参照。npm依存と確認用画面を整備し、バージョンはpackage.jsonとlockfileに固定した。生成・移行・保存機能は未実装。
+2026-10-22作成、2026-10-27更新。ユーザーの指定は「単一リポジトリ」「モダンな技術」「AIエージェントによる保守」「デスクトップはElectron」「スマホはAndroidのみ」。追加の指定により、シンプルな構成、GitHub Actionsを使わないローカル検証、当面Windows上でのデスクトップ検証を基本方針とする。[基本方針の決定](decisions/0001-simple-structure-and-local-validation.md)、[開発環境の決定](decisions/0002-development-environment.md)を参照。バージョンはpackage.jsonとlockfileに固定した。PC互換コアとデスクトップの初回機能は[ADR 0005](decisions/0005-desktop-implementation.md)に沿って実装した。以下の提案のうち、同ADRで採用した範囲と未決定の範囲を区別する。
 
 ## 基本構成：TypeScriptの共通コア＋Electron／React Native
+
+2026-10-27追記：ユーザー指定により、デスクトップから旧PC版の仕様・UIを基準に移行する。[ADR 0003](decisions/0003-desktop-migration-scope.md)と[デスクトップ移行設計](desktop-design.md)に、2タブの配置・操作、保存・移行・IPCの設計案と未決定事項を記録した。新PC版から旧Android版への書き出しは不要。新Android版との受け渡し方法、保存形式・暗号化は引き続き設計対象とする。
+
+同日、Androidの初回範囲を旧版と同じ選択・生成・コピーにすることをユーザーへ確認した。[ADR 0004](decisions/0004-android-migration-scope.md)と[Android移行設計](android-design.md)を参照。登録・salt追加はPC側で行う。明示的なファイル受け渡しと全件置換による再取り込みを提案し、暗号化・転送経路・追加依存・OS設定は実装前に確定する。
+
+その後、ユーザー承認によりデスクトップは平文のバージョン付きJSON、新規登録8〜64文字、記号の初出順保持を採用した。ハッシュは共通コアへ注入し、main側ではNode標準のUTF-8 SHA-512を使う。新規依存は導入していない。旧AndroidとPCの剰余精度・乱数境界の差異は[調査メモ](legacy-mobile-differences.md)へ記録した。調査後のユーザー承認により、Androidも剰余・乱数ともPC互換の共通コアへ統一する（[ADR 0006](decisions/0006-shared-pc-generator.md)）。後続の[ADR 0010](decisions/0010-android-implementation.md)でAndroidの取り込み・保存・生成／コピーを実装した。空マスターを許可し、平文JSON・直前1版・10MiB上限・OSバックアップ除外を採用した。実機確認は未実施。後続の[ADR 0007](decisions/0007-portable-desktop.md)でデスクトップをEXE隣への保存に変更し、復元・エクスポート・保存場所表示は削除した。新Androidへの受け渡しは停止中の`data.json`のコピーを基本とする。
 
 | 領域               | 提案                                                                 | 理由                                                                                                         |
 | ------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -52,7 +58,7 @@ apps/
   android/                 Expo development clientを使うAndroidアプリ
 packages/
   core/                    UI・OS非依存の生成、モデル、旧形式インポート
-  compatibility-fixtures/  今後作成予定の固定入力・独立した期待値
+  compatibility-fixtures/  出典付き固定入力・GUI期待値・旧ソース由来期待値
 docs/
   legacy-projects.md
   technology-proposal.md
@@ -74,12 +80,12 @@ docs/
 
 1. Windowsでの検証用ビルド作成・起動方法と、将来の署名・配布方法。macOS・Linuxへの展開は当面保留する。
 2. Androidの対応端末／最低OS、配布方法、初期から自動入力・生体認証が必要か。
-3. スマホ側でもサービス登録・salt追加を可能にするか、当初は旧来の読込・生成のみか。
+3. スマホ側は初回は旧来の読込・生成のみとする（2026-10-27ユーザー確認済み）。登録・salt追加の拡張は別途要望時に検討する。
 4. PCとスマホ間は手動ファイル転送でよいか、自動同期が必要か。
 5. 設定ファイルの暗号化とバックアップ・復元の要件。生成用マスターと保管用の解除方法を同じにするかも別途判断する。
 6. 既存データの互換性範囲、両旧実装の差異があった場合の優先元、短い生成長の制限。
 
-開発環境の固定バージョンと導入手順はREADMEに記録した。残りの機能要件は必要なADRを追加・更新しながら決め、共通fixtureと互換コアの実装へ進む。今後の依存更新も公式の対応条件と固定テストで確認する。
+開発環境の固定バージョンと導入手順はREADMEに記録した。共通fixture・互換コア・デスクトップの初回機能は実装済みで、Windows手動確認と、生成版をPC互換に決定したAndroidの機能実装・実機確認が残る。今後の依存更新も公式の対応条件と固定テストで確認する。
 
 ## 参照した公式資料
 

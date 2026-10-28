@@ -5,6 +5,18 @@
     "version": "0.1.0",
     "platforms": ["android"],
     "scheme": "newpasswordmanager",
-    "android": { "package": "io.github.ikegami5.newpasswordmanager" }
+    "android": {
+      "package": "io.github.ikegami5.newpasswordmanager",
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "versionCode": 1
+    },
+    "plugins": [
+      "./plugins/with-private-data.cjs",
+      "./plugins/with-release-signing.cjs"
+    ]
   }
 }

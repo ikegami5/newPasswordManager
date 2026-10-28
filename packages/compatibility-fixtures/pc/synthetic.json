@@ -1,0 +1,830 @@
+[
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 1,
+    "expected": "l"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 4,
+    "expected": "orxk"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "duogtoae"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 16,
+    "expected": "ddwfjtxwxqugslkk"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 64,
+    "expected": "wnxvxukrxjlvvofhyxpibyzhdfwookyotbptxdrwyrttqxmfxsilevfmxxqmlqiz"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 4,
+    "expected": "ysu!"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 8,
+    "expected": "exozezv#"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 16,
+    "expected": "sn@zjluiffslozaa"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 64,
+    "expected": "ihjdxnzozruadchljuikwxvmxkhacxzatssxzvulzbxvqznmxbf!fcgrjj!gbpk@"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 4,
+    "expected": "!i!g"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 8,
+    "expected": "dhf!!pqu"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 16,
+    "expected": "yhhduchnd!pdz!@l"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 64,
+    "expected": "pkfpwjunirvspf!fldlbcxxhsosif!kihdaiiyp!k#iwyi@ywamz@!c!ffetmsbg"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 4,
+    "expected": "s* j"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 8,
+    "expected": "v l.l*)o"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 16,
+    "expected": "lnx|b,nyfh*s[[/j"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 64,
+    "expected": "sk-hl e|.q}chw.aty(o.\\bfvh  wrm ?^jc.x?wm{c{f.]^l[q]g||\\--vub*o+"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 4,
+    "expected": "x71j"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "ylrcg7pa"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 16,
+    "expected": "3lrbor81g9xbuidm"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 64,
+    "expected": "1ft6eb577zfn6rb8kbihlpor0el1rh41nyo67w39486y37f7eukpjy8ktt1mm8hj"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 4,
+    "expected": "m1#b"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 8,
+    "expected": "!bvy7f@q"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 16,
+    "expected": "mh#lkircn53y9lpy"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 64,
+    "expected": "cerzn68d42gjzvlt6nx!o3zthl#fvybfisfq4mdabeq7k4r1n9!1i0gnrrknl2!j"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 4,
+    "expected": "!0wz"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 8,
+    "expected": "3kqpv6!c"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 16,
+    "expected": "7b1uvto!lxa!p9k8"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 64,
+    "expected": "af6ggh@u!ielg7bhi!pv0m31uy!w72nwxu2y!7txnwya6!qdgjfpkoa966o3z!vc"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 4,
+    "expected": " 7u$"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 8,
+    "expected": "0y}ff/.["
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 16,
+    "expected": "-3 j. *^x$-,swp+"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 64,
+    "expected": "^gy6cjde6\\4561$5i,+8tu.11zy|19\\|*0b/6|?,\\h/za6{/c]kb4c*7yynw+*8{"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 4,
+    "expected": "HcvO"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "nhHKDqPr"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 16,
+    "expected": "LndBkDgOIjhKYWii"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 64,
+    "expected": "OVIFIhyvgaWFFHBQMguobMEenZOqHiTqDbcDgLRdTvDpjgCBIYmWrsBCIIxwzxoE"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 4,
+    "expected": "iN!G"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 8,
+    "expected": "Omt#veVS"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 16,
+    "expected": "clnMwblNzhL!Zoek"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!@#",
+    "passwordLength": 64,
+    "expected": "HLVQBPvME@#!QFCpENWYxTOCvkwsFUBsOjRZEUIDBGZfuEYqBoyGznrqVVhmIdYK"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 4,
+    "expected": "D#Hz"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 8,
+    "expected": "LKRad@cB"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 16,
+    "expected": "m@!bZ!ogwEbydIxk"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": "!!@#",
+    "passwordLength": 64,
+    "expected": "flcDFOAOsAaJDF!snyILgle!!woHFCxHS@T!s#VDxU!bwsYQFqddToGPccghZQLL"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 4,
+    "expected": "Wnz+"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 8,
+    "expected": "({D^kwYP"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 16,
+    "expected": "]((kM\\Bz|Bg|}+Rm"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": false,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 64,
+    "expected": "DJdnFYAzjmoznYhK*|EcFqo(HGeQYZxQS?lPjigCxPPg.jR]FZw}MBnldd,fIkca"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 4,
+    "expected": "Vr2J"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "BOpgA0Iw"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 16,
+    "expected": "joUV9YJQHjugcwER"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "",
+    "passwordLength": 64,
+    "expected": "ZXFzrJvijRwuzZFHsPG0VqKNoi2tZ79tgz4kjDHt9OkuQjbrrcxCaky9FFmCbW03"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 4,
+    "expected": "Sw4!"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 8,
+    "expected": "2nu9!G4a"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 16,
+    "expected": "iv70wZsJD#fARdAx"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 64,
+    "expected": "ev56xiKk4apq6npUcFu0gh320YTunNJuXonW4RvPJlWdS4FCxU!Yy38555jb8w0f"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 4,
+    "expected": "!t1I"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 8,
+    "expected": "a0w!oTJy"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 16,
+    "expected": "tFPGXSFcHMT2ji!u"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 64,
+    "expected": "!Ygv1s5mIC!wvVH@QW6J#LX#hMAEV6dEAR5!ImE9dV!9IIaz1jo4ZGP7ggviUgJC"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 1,
+    "error": "exhausted"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 4,
+    "expected": "?o3G"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 8,
+    "expected": "r|Vy4b[D"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 16,
+    "expected": "i|BroUyn-4kwSYp?"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": " ,-[\\]^$.*+?(){}|/",
+    "passwordLength": 64,
+    "expected": "Q[V66A0r7MtW6i|*MwSojIE,$RwLi8dLNr(R7iU4daRk97Gv62qSpykYVVsEFno/"
+  },
+  {
+    "master": "架空🔑マスター",
+    "salt": "架空ソルト",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 24,
+    "expected": "4AgArn!icN5b6K952h4inxZw"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "dummy-old-salt",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 12,
+    "expected": "urrooIu6GV#d"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "dummy-new-salt",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 12,
+    "expected": "wIBKu3X#wLlx"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "dummy-salt",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "#@!",
+    "passwordLength": 32,
+    "expected": "kecJAP9qlgIfX#xwzNbpRpz0b!a63tBz"
+  },
+  {
+    "master": "dummy-master",
+    "salt": "dummy-salt",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!!@#",
+    "passwordLength": 32,
+    "expected": "5ckR1dp!pxwWY!hSScSeVULeKMAcycgi"
+  },
+  {
+    "master": "",
+    "salt": "",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "dpdcbxod"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 4,
+    "expected": "wqez"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 8,
+    "expected": "abaxksql"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 9,
+    "expected": "jwjgqxitm"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 10,
+    "expected": "togqqnzzbm"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": false,
+    "hasNumeral": false,
+    "symbols": "",
+    "passwordLength": 16,
+    "expected": "zdixianqxkcgzvbs"
+  },
+  {
+    "master": "dummyMaster1",
+    "salt": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01",
+    "hasCapital": true,
+    "hasNumeral": true,
+    "symbols": "!@#",
+    "passwordLength": 4,
+    "expected": "#Id3"
+  }
+]

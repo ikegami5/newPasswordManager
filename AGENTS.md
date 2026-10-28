@@ -6,7 +6,9 @@
 - デスクトップはElectron、スマホはAndroidのみ。iPhone対応は不要。
 - シンプルな構成を優先し、npm workspaces、Electron＋React＋TypeScript、React Native＋TypeScript、共通コアを基本方針とする。詳細は`docs/decisions/0001-simple-structure-and-local-validation.md`を参照する。
 - 最初に`README.md`、`docs/legacy-projects.md`、`docs/technology-proposal.md`と`git status --short`を確認し、ユーザーの既存変更を保護する。
-- 現時点は開発環境と確認用画面を整備した段階。AndroidはExpo development clientを採用し、詳細は`docs/decisions/0002-development-environment.md`に記録する。生成・移行・保存機能は未実装。ユーザーが依頼した範囲で進める。
+- PC互換コア、旧形式解析、デスクトップの生成・登録・履歴追加・平文JSON保存・内部バックアップ、Androidの取り込み・内部2世代保存・履歴選択・生成・機密コピー・前景での期限消去を実装した。ユーザーからPC・Androidの動作確認と本番JSON移行完了の報告あり。本番データを追加で読む必要はない。PCの旧移行は「旧データ移行」タブへ移した。Androidのアプリ内互換性チェック・復元・再読込は削除し、再取り込みへ集約した（ADR 0011）。保存形式と互換生成は変更していない。
+- 正式配布物はWindows x64のZIPと、バンドル内蔵・専用鍵署名のAndroid APK。正式版はMetro不要、開発版だけMetroを使う。ユーザー承認により正式鍵を`.local-tools/android-signing/`（Git対象外）へ新規作成し、Androidは開発版と同じアプリIDを採用した。初回入替では開発版のアンインストールで内部データが消えるので、利用者が元JSON確保後に操作する。エージェントは実データ読込・アンインストールを行わない。鍵の再作成や上書きもしない。詳細は`docs/decisions/0012-production-packages.md`、`docs/windows-installation.md`、`docs/android-installation.md`、開発接続は`docs/android-validation.md`。今回の配布物自体の実機結果は別に確認する。
+- Android本番ビルドのKotlin同一プロセス方式・heap／Metaspace各2GiB・並列数2は承認済み。`npm run build:android:release`の引数に限定し、global設定を変えない。
 - 旧リポジトリは参照実装。移行作業に伴って旧コード・依存関係・fixtureを無断で変更しない。
 
 ## 互換性と仕様変更
@@ -26,7 +28,7 @@
 - 旧リポジトリの67件のサンプルは機密情報なしと明記されたテスト資料。取り込む際は出典とコミットを記録し、期待値を新実装から再生成しない。
 - 互換性テストは生成結果の完全一致を中心に、過去salt、Unicode、記号の順序・重複、境界値、生成不能時、保存形式の解析を確認する。
 - 共通ロジックの成功だけでElectronやAndroid実機の動作確認済みと報告しない。環境、コマンド、成否、未実施範囲を区別する。
-- 実装後は変更範囲に適した型チェック・lint・テスト・ビルドを実行する。コマンドはREADMEとルートのpackage.jsonを参照する。現在のVitestにはテストケースがなく、成功終了を互換性確認済みと扱わない。文書のみの変更でアプリの実動作を検証済みとしない。
+- 実装後は変更範囲に適した型チェック・lint・テスト・ビルドを実行する。コマンドはREADMEとルートのpackage.jsonを参照する。Vitestは提供67件の期待値、旧PC由来92件の合成期待値、解析・保存・mainサービス等を検証する。共通テストの成功をWindowsやAndroid実機の検証済みと扱わない。文書のみの変更でアプリの実動作を検証済みとしない。
 - GitHub Actionsは使用せず、ワークフローを追加・実行しない。型チェック・lint・互換性テスト・ビルドはローカルで実行し、手順と結果を記録する。
 - デスクトップのアプリ動作検証は当面Windows上で行う。macOS・Linuxでのアプリ動作検証は要求しない。WSL上の共通ロジック検証だけでWindowsアプリの検証済みとしない。
 - Electron採用時はmain/preload/rendererの権限を分離し、限定したIPCと入力検証を使う。秘密情報を不要にUIへ渡さない。

@@ -40,3 +40,12 @@ prefix_rule(
     decision = "prompt",
     match = ["git push origin main --force", "git push origin main --force-with-lease"],
 )
+
+# Allow only repository-local commit author settings.
+# Global configuration, credential helpers and hooks are outside this rule.
+prefix_rule(
+    pattern = ["git", "config", "--local", ["user.name", "user.email"]],
+    decision = "allow",
+    match = ["git config --local user.name example", "git config --local user.email example@example.invalid"],
+    not_match = ["git config --global user.name example", "git config --local core.hooksPath scripts/hooks"],
+)

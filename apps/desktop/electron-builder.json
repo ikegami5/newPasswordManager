@@ -1,14 +1,30 @@
 {
   "appId": "io.github.ikegami5.newpasswordmanager",
   "productName": "New Password Manager",
-  "directories": { "output": "dist" },
+  "directories": {
+    "output": "dist"
+  },
   "files": ["out/**/*", "package.json"],
+  "extraResources": [
+    {
+      "from": "resources/icon.ico",
+      "to": "icon.ico"
+    }
+  ],
   "asar": true,
   "electronDownload": {
     "cache": "../../.cache/electron"
   },
   "win": {
-    "target": [{ "target": "zip", "arch": ["x64"] }],
-    "signAndEditExecutable": false
-  }
+    "target": [
+      {
+        "target": "zip",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "resources/icon.ico",
+    "signAndEditExecutable": true,
+    "signExecutable": false
+  },
+  "electronLanguages": ["ja", "en-US"]
 }

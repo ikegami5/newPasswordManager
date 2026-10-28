@@ -7,3 +7,4 @@ apps/desktop/dist/
 apps/android/.expo/
 apps/android/android/
 apps/android/dist/
+apps/android/artifacts/

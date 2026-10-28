@@ -1,0 +1,72 @@
+[
+  {
+    "path": "pc/records.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/test/resources/compatibility/records.txt",
+    "sha256": "9584abeb6b0b4f7f44dbacf2ede912ab0da274b768aec253b8661acd04ca21b9"
+  },
+  {
+    "path": "pc/expected.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/test/resources/compatibility/expected.txt",
+    "sha256": "867c86608e9c65e5ccd1cb024b32c4d188009a65b86d6b6aa85159c12053db42"
+  },
+  {
+    "path": "pc/master.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/test/resources/compatibility/master.txt",
+    "sha256": "f01fd0c1b7a60fec23218375e7555b2a9e78e77b5790642b177dfe0456eae20b"
+  },
+  {
+    "path": "pc/PasswordGenerator.scala.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/main/scala/passwordManagerMain/PasswordGenerator.scala",
+    "sha256": "64b160e234bfe49441b049d54af082162b6835f53abac6f65dac1e8979b36b22"
+  },
+  {
+    "path": "pc/Record.scala.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/main/scala/passwordManagerMain/Record.scala",
+    "sha256": "894efb74008a5e8d2a5fca32ae0524d86e5dc461fd3a77c58e8be5812077b486"
+  },
+  {
+    "path": "pc/LineSeparators.scala.txt",
+    "repository": "https://github.com/ikegami5/passwordManager",
+    "commit": "9840d111cab0f0634cfaa1a50dd6c81da28cafc1",
+    "source": "src/main/scala/passwordManagerMain/LineSeparators.scala",
+    "sha256": "00b03aefa52732ecb93dcce8858e1c4cf4016d36fcc154d54950949906c00ac8"
+  },
+  {
+    "path": "mobile/binary.js.txt",
+    "repository": "https://github.com/ikegami5/password_manager_sp",
+    "commit": "015b9c10f62183965aa7bb10881c42c22c33e612",
+    "source": "binary.js",
+    "sha256": "46fccbf6f422053783614cb642cfc1ef418371ab5bfc6a4a800e3e9ea9ef7b7c"
+  },
+  {
+    "path": "mobile/random.js.txt",
+    "repository": "https://github.com/ikegami5/password_manager_sp",
+    "commit": "015b9c10f62183965aa7bb10881c42c22c33e612",
+    "source": "random.js",
+    "sha256": "ff0e8400a5835e94050117dae7995f712f2d9595e1590e49e4d28736aad5942f"
+  },
+  {
+    "path": "mobile/util.js.txt",
+    "repository": "https://github.com/ikegami5/password_manager_sp",
+    "commit": "015b9c10f62183965aa7bb10881c42c22c33e612",
+    "source": "util.js",
+    "sha256": "63c0a4576ed4ced654a93c751ef72a45343819328a2085871fd34ec33951ec02"
+  },
+  {
+    "path": "mobile/password-sample.txt",
+    "repository": "https://github.com/ikegami5/password_manager_sp",
+    "commit": "015b9c10f62183965aa7bb10881c42c22c33e612",
+    "source": "__tests__/fixtures/password-sample.txt",
+    "sha256": "7df0e745a17b697ea9757823417a39359fadb4db6ac9a72b90c7a4b9bdd45fc8"
+  }
+]

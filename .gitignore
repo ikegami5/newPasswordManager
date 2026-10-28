@@ -158,3 +158,8 @@ apps/android/ios/
 *.jks
 local.properties
 data.txt
+
+# Local release artifacts and real portable data
+apps/android/artifacts/
+data.json
+data.json.bak
